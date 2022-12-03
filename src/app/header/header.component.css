@@ -1,0 +1,24 @@
+img{
+    width: 30px;
+}
+.fullNav{
+background-color: rgb(108, 108, 108);
+
+}
+.navLink{
+color: aliceblue;
+}
+#profile{
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    color:rgb(60, 60, 228);
+    background-color: rgb(202, 202, 243);
+    padding: 15px;
+  border-radius: 5px;
+    box-shadow: 1px 10px 15px rgb(187, 187, 187);
+    transition: transform 100ms;
+}
+#profile:hover{
+    transform: scale(1.09);
+}
