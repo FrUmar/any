@@ -10,7 +10,9 @@ import { WorkerComponent } from './worker/worker.component';
 import { NewProductComponent } from './new-product/new-product.component';
 import { UsedProductComponent } from './used-product/used-product.component';
 import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FooterComponent } from './footer/footer.component';
+import { CatagaryNavComponent } from './catagary-nav/catagary-nav.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +21,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
     WorkerComponent,
     NewProductComponent,
     UsedProductComponent,
+    FooterComponent,
+    CatagaryNavComponent,
     
   ],
   imports: [

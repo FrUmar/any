@@ -1,14 +1,14 @@
 <div class=" mt-5  d-flex justify-content-center text-center ">
-    <button class="btn btn-sm btn-outline-primary me-2 " (click)="acc.toggle('toggle-1')">Dawlance</button>
-    <button class="btn btn-sm btn-outline-primary me-2" (click)="acc.toggle('toggle-2')">Orient</button>
-    <button class="btn btn-sm btn-outline-primary me-2" (click)="acc.toggle('toggle-3')">Haier</button>
+    <button class="btn btn-sm btn-outline-info me-2 " (click)="acc.toggle('toggle-1')">Dawlance</button>
+    <button class="btn btn-sm btn-outline-info me-2" (click)="acc.toggle('toggle-2')">Orient</button>
+    <button class="btn btn-sm btn-outline-info me-2" (click)="acc.toggle('toggle-3')">Haier</button>
 </div>
 <br>
 
 <ngb-accordion #acc="ngbAccordion">
     <ngb-panel id="toggle-1" title="Dawlance">
         <ng-template ngbPanelContent>
-            <h3 class="text-center bg-primary">Dawlance</h3>
+            <h3 class="text-center bg-primarygit ">Dawlance</h3>
             <div class="text-center productitem">
                 <div *ngFor="let view of [1,1,1,1]">
                     <div class="list-view ">
@@ -106,7 +106,7 @@
                                         <h5 class="card-title title">Title</h5>
                                         <p class="card-text discription ">Description</p>
                                     </div>
-                                    div class="card-body">
+
                                     <h5 class="card-title text-suxxess">Final Price
                                         <span class="text-primary">-20%</span>
                                     </h5>

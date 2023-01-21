@@ -11,5 +11,8 @@ export class WorkerComponent {
 
   constructor(private modalService: NgbModal){}
 
- 
+  open(content:any) {
+    debugger
+		this.modalService.open(content);
+	}
 }

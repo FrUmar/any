@@ -1,5 +1,8 @@
 img{
     width: 30px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    mix-blend-mode: color-burn;
 }
 .fullNav{
 background-color: rgb(108, 108, 108);
@@ -21,4 +24,16 @@ color: aliceblue;
 }
 #profile:hover{
     transform: scale(1.09);
+}
+.header{
+    position:fixed;
+    z-index: 1;
+    margin-top: 0;
+    top: 0;
+}
+#generalmodal
+{
+    z-index: 19;
+    position: relative;
+    top: 40px;
 }

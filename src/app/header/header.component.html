@@ -1,66 +1,76 @@
-<ul ngbNav #nav="ngbNav" class="nav-tabs fullNav">
+<div class="header container-fluid d-none">
+    <ul ngbNav #nav="ngbNav" class="nav-tabs fullNav">
 
-    <li ngbNavItem class="bg-light">
+        <li style="margin-top: 3px;" ngbNavItem class="bg-light">
 
-        <a><img [src]="url">
-            Nomi Cooling Center</a>
-    </li>
-    <li ngbNavItem>
+            <a>
+                <img [src]="url">
+                Nomi Cooling Center</a>
+        </li>
+        <li ngbNavItem>
 
-        <ng-template ngbNavContent>First content</ng-template>
-    </li>
-    <li ngbNavItem>
-        <a ngbNavLink class="navLink" routerLink="">Home</a>
-        <ng-template ngbNavContent>Second content</ng-template>
-    </li>
-    <li ngbNavItem>
-        <a ngbNavLink class="navLink" routerLink="/worker">Worker's</a>
-        <ng-template ngbNavContent>Second content</ng-template>
-    </li>
-    <li ngbNavItem>
-        <a ngbNavLink class="navLink" routerLink="/used-product">Used Product</a>
-        <ng-template ngbNavContent>Second content</ng-template>
-    </li>
-    <li ngbNavItem>
-        <a ngbNavLink class="navLink" routerLink="/new-product">New Product</a>
-        <ng-template ngbNavContent>Second content</ng-template>
-    </li>
-    <li ngbDropdown class="nav-item">
-        <a href (click)="false" class="nav-link" ngbDropdownToggle>More</a>
-        <div ngbDropdownMenu>
-            <button ngbDropdownItem>Contect</button>
-            <button ngbDropdownItem>Complane</button>
-            <button ngbDropdownItem>Email</button>
-            <div class="dropdown-divider"></div>
-            <button ngbDropdownItem>About</button>
-        </div>
+            <ng-template ngbNavContent>First content</ng-template>
+        </li>
+        <li ngbNavItem>
+            <a ngbNavLink class="navLink" routerLink="">Home</a>
+            <ng-template ngbNavContent>Second content</ng-template>
+        </li>
+        <li ngbNavItem>
+            <a ngbNavLink class="navLink" routerLink="/worker">Worker's</a>
+            <ng-template ngbNavContent>Second content</ng-template>
+        </li>
+        <li ngbNavItem>
+            <a ngbNavLink class="navLink" routerLink="/used-product">Used Product</a>
+            <ng-template ngbNavContent>Second content</ng-template>
+        </li>
+        <li ngbNavItem>
+            <a ngbNavLink class="navLink" routerLink="/new-product">New Product</a>
+            <ng-template ngbNavContent>Second content</ng-template>
+        </li>
+        <li ngbDropdown class="nav-item">
+            <a href (click)="false" class="nav-link" ngbDropdownToggle>More</a>
+            <div ngbDropdownMenu>
+                <button ngbDropdownItem>Contect</button>
+                <button ngbDropdownItem>Complane</button>
+                <button ngbDropdownItem>Email</button>
+                <div class="dropdown-divider"></div>
+                <button ngbDropdownItem>About</button>
+            </div>
 
-    </li>
-    <li id="profile" ngbDropdown class="nav-item">
-        <fa-icon [icon]="icon" href (click)="false" ngbDropdownToggle></fa-icon>
-        <div ngbDropdownMenu>
-            <img ngbDropdownItem [src]="url">
-            <div class="dropdown-divider"></div>
-            <button ngbDropdownItem>login</button>
-        </div>
-    </li>
-</ul>
+        </li>
+        <li id="profile" ngbDropdown class="nav-item">
+            <fa-icon [icon]="icon" href (click)="false" ngbDropdownToggle></fa-icon>
+            <div ngbDropdownMenu>
+                <img ngbDropdownItem [src]="url">
+                <div class="dropdown-divider"></div>
+                <button ngbDropdownItem class="btn btn-outline-primary" data-bs-toggal="modal"
+                    data-bs-target="#generalmodal">login</button>
+                <button ngbDropdownItem class="btn btn-outline-primary" data-bs-toggal="modal"
+                    data-bs-target="#generalmodal">Registers</button>
+            </div>
+        </li>
+    </ul>
 
-<a href="">
+    <a href="">
 
-</a>
-<ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-    <li>
-        <a class="dropdown-item" href="#">Action</a>
-    </li>
-    <li>
-        <a class="dropdown-item" href="#">Another action</a>
-    </li>
-    <li>
-        <hr class="dropdown-divider" />
-    </li>
-    <li>
-        <a class="dropdown-item" href="#">Something else here</a>
-    </li>
-</ul>
-<div [ngbNavOutlet]="nav"></div>
+    </a>
+    <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <li>
+            <a class="dropdown-item" href="#">Action</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">Another action</a>
+        </li>
+        <li>
+            <hr class="dropdown-divider" />
+        </li>
+        <li>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </li>
+    </ul>
+    <div [ngbNavOutlet]="nav"></div>
+</div>
+<!-- CatagariNav -->
+<div>
+    <app-catagary-nav></app-catagary-nav>
+</div>

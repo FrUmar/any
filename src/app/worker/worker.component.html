@@ -28,3 +28,11 @@
         </ng-template>
     </ngb-panel>
 </ngb-accordion>
+<ng-template #content let-c="close" let-d="dismiss" class="zindex-modal bg-color-dark">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="d('Cross click')"></button>
+    </div>
+
+</ng-template>
+<button class="btn btn-lg btn-outline-primary " (click)="open(content)">Launch demo modal</button>

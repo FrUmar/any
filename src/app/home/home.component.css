@@ -7,4 +7,11 @@ hr.new4 {
     width: 21%;
 left: 39%;   
 }
-  
+.footer{
+    display: block;
+    height: 5rem;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
