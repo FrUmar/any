@@ -1,7 +1,7 @@
-<div class="header container-fluid d-none">
+<div class="header ">
     <ul ngbNav #nav="ngbNav" class="nav-tabs fullNav">
 
-        <li style="margin-top: 3px;" ngbNavItem class="bg-light">
+        <li style="margin-top: 3px;" ngbNavItem style="color: aliceblue;">
 
             <a>
                 <img [src]="url">
@@ -12,7 +12,7 @@
             <ng-template ngbNavContent>First content</ng-template>
         </li>
         <li ngbNavItem>
-            <a ngbNavLink class="navLink" routerLink="">Home</a>
+            <a ngbNavLink class="navLink" routerLink="" routerLinkActive="">Home</a>
             <ng-template ngbNavContent>Second content</ng-template>
         </li>
         <li ngbNavItem>
@@ -38,15 +38,17 @@
             </div>
 
         </li>
-        <li id="profile" ngbDropdown class="nav-item">
-            <fa-icon [icon]="icon" href (click)="false" ngbDropdownToggle></fa-icon>
+        <li id="profile" ngbDropdown href (click)="false" class="nav-item">
+            <fa-icon [icon]="icon" href ngbDropdownToggle></fa-icon>
             <div ngbDropdownMenu>
                 <img ngbDropdownItem [src]="url">
                 <div class="dropdown-divider"></div>
                 <button ngbDropdownItem class="btn btn-outline-primary" data-bs-toggal="modal"
-                    data-bs-target="#generalmodal">login</button>
+                    data-bs-target="#generalmodal" onclick="document.getElementById('id01').style.display='block'"
+                    class="w3-button w3-green w3-large">login</button>
                 <button ngbDropdownItem class="btn btn-outline-primary" data-bs-toggal="modal"
-                    data-bs-target="#generalmodal">Registers</button>
+                    data-bs-target="#generalmodal" onclick="document.getElementById('id02').style.display='block'"
+                    class="w3-button w3-green w3-large">Registers</button>
             </div>
         </li>
     </ul>
@@ -73,4 +75,80 @@
 <!-- CatagariNav -->
 <div>
     <app-catagary-nav></app-catagary-nav>
+</div>
+
+<!-- login fome -->
+<div class="w3-container">
+    <div id="id01" class="w3-modal main" style="background-image: url(./assets/wall.jpg);">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom fome">
+
+            <div class="w3-center"><br>
+                <i class="fa-solid fa-circle-user fa-7x"></i>
+            </div>
+
+            <form #Login='ngForm' (ngSubmit)="login(Login.value)" class="w3-container" action="/action_page.php">
+                <div class="w3-section">
+                    <label><b>Username</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Email"
+                        name="usrname" required ngModel>
+                    <label><b>Password</b></label>
+                    <input class="w3-input w3-border w3-margin-bottom" type="password" placeholder="Enter Password"
+                        name="psw" required ngModel>
+
+
+                </div>
+
+
+                <div class="w3-container w3-border-top w3-padding-6 w3-light-grey w3-margin-top"
+                    style="border-radius:0 0 30px 30px;">
+                    <button onclick="document.getElementById('id01').style.display='none'" type="button"
+                        class="w3-button w3-red" style="border-radius: 10px;">Cancel</button>&nbsp;
+                    <button class="w3-button  w3-green w3-section w3-padding" type="submit"
+                        style="border-radius: 10px;">Login</button>
+                    <span class="w3-right w3-padding w3-hide-small">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- register fome -->
+<div class="w3-container">
+    <div id="id02" *ngIf="display" class="w3-modal main" style="background-image: url(./assets/wall.jpg);">
+        <div class="w3-modal-content w3-card-4 w3-animate-zoom fome">
+
+            <div class="w3-center"><br>
+                <i class="fa-solid fa-circle-user fa-7x"></i>
+            </div>
+
+            <form #Register='ngForm' (ngSubmit)="register(Register.value)
+            " class="w3-container" action="/action_page.php">
+                <div class="w3-section">
+                    <label><b>Full Name</b></label>
+                    <input ngModel class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter name"
+                        name="name" required>
+                    <label>Address</label>
+                    <input ngModel class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Address"
+                        name="Address" required>
+                    <label><b>User-email</b></label>
+                    <input ngModel class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Username"
+                        name="usrname" required>
+                    <label><b>Password</b></label>
+                    <input ngModel class="w3-input w3-border w3-margin-bottom" type="password"
+                        placeholder="Enter Password" name="psw" required>
+
+
+                </div>
+
+
+                <div class="w3-container w3-border-top w3-padding-6 w3-light-grey w3-margin-top"
+                    style="border-radius:0 0 30px 30px;">
+                    <button onclick="document.getElementById('id02').style.display='none'" type="button"
+                        class="w3-button w3-red" style="border-radius: 10px;">Cancel</button>&nbsp;
+                    <button class="w3-button  w3-green w3-section w3-padding" type="submit"
+                        style="border-radius: 10px;">register</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
 </div>

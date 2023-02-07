@@ -1,0 +1,53 @@
+{
+  "salar": [
+    {
+      "name": "Umar",
+      "Username": "umar123@gmail.com",
+      "address": "zerhan Caloni kamalia",
+      "pasward": "json-server --watch db.json",
+      "id": 1
+    },
+    {
+      "name": "ali",
+      "Address": "ali",
+      "usrname": "ali@gmail.com",
+      "psw": "abc123",
+      "id": 2
+    },
+    {
+      "name": "me",
+      "Address": "mee",
+      "usrname": "me@gmail.com",
+      "psw": "abcd1234",
+      "id": 3
+    },
+    {
+      "name": "",
+      "Address": "",
+      "usrname": "umar@gmail.com",
+      "psw": "kamalia123",
+      "id": 4
+    },
+    {
+      "name": "wli",
+      "Address": "708",
+      "usrname": "wli@gmail.com",
+      "psw": "abcdef",
+      "id": 5
+    },
+    {
+      "name": "kjoiu",
+      "Address": "klj",
+      "usrname": "umar@gmail.com",
+      "psw": "kamalia123",
+      "id": 6
+    },
+    {
+      "name": "affan",
+      "Address": "kamalia",
+      "usrname": "affan@gmail.com",
+      "psw": "affan123",
+      "id": 7
+    }
+  ]
+}

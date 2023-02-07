@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -12,7 +13,9 @@ import { UsedProductComponent } from './used-product/used-product.component';
 import{BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FooterComponent } from './footer/footer.component';
-import { CatagaryNavComponent } from './catagary-nav/catagary-nav.component'
+import { CatagaryNavComponent } from './catagary-nav/catagary-nav.component';
+import {  HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,12 +26,13 @@ import { CatagaryNavComponent } from './catagary-nav/catagary-nav.component'
     UsedProductComponent,
     FooterComponent,
     CatagaryNavComponent,
+  
     
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    AppRoutingModule,BrowserAnimationsModule, FontAwesomeModule
+    AppRoutingModule,BrowserAnimationsModule, FontAwesomeModule,FormsModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

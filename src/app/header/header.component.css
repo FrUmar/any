@@ -1,8 +1,9 @@
 img{
-    width: 30px;
-    aspect-ratio: 3/2;
+    width: 40px;
+    /* aspect-ratio: 3/2;
     object-fit: contain;
-    mix-blend-mode: color-burn;
+    mix-blend-mode: color-burn; */
+    height: 20px;
 }
 .fullNav{
 background-color: rgb(108, 108, 108);
@@ -30,10 +31,26 @@ color: aliceblue;
     z-index: 1;
     margin-top: 0;
     top: 0;
+width: 100%;
 }
+@media only screen and (max-width: 600px) {
+   .header {
+      display: none;
+    }
+  }
 #generalmodal
 {
     z-index: 19;
     position: relative;
     top: 40px;
+}
+.fome{
+  max-width:500px;
+  border-radius: 30px;
+  background-color: inherit;
+  
+}
+.main{
+  background-repeat:no-repeat;
+  background-size:100% ;
 }
